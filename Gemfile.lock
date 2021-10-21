@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/jruby/jruby-openssl.git
+  revision: c862febc6a77d6aae708bce1564fba21810cbb44
+  tag: v0.10.3
+  specs:
+    jruby-openssl (0.10.3-java)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -6,11 +13,16 @@ GEM
     net-ssh (4.1.0)
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
+  jruby-openssl!
   net-sftp (= 2.1.2)
   net-ssh (= 4.1.0)
+
+RUBY VERSION
+   ruby 2.5.7p0 (jruby 9.2.16.0)
 
 BUNDLED WITH
    1.17.2
