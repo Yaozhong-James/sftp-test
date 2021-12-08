@@ -12,7 +12,8 @@ end
 host = get_env("HOST")
 username = get_env("USERNAME")
 options = { password: get_env("PASSWORD"), kex: 
-  %w(diffie-hellman-group14-sha1
+  %w(diffie-hellman-group-exchange-sha256
+     diffie-hellman-group14-sha1
      diffie-hellman-group-exchange-sha256)
 }
 
