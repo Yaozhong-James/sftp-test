@@ -11,7 +11,10 @@ end
 
 host = get_env("HOST")
 username = get_env("USERNAME")
-options = { password: get_env("PASSWORD") }
+options = { password: get_env("PASSWORD"), kex: 
+  %w(diffie-hellman-group14-sha1
+     diffie-hellman-group-exchange-sha256)
+}
 
 logger.info "Starting SSH connection"
 ssh = Net::SSH.start(host, username, {
