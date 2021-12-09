@@ -20,8 +20,7 @@ options = { password: get_env("PASSWORD"), kex:
 logger.info "Starting SSH connection"
 ssh = Net::SSH.start(host, username, {
     auth_methods: ["password"],
-    non_interactive: true,
-    logger: logger}.merge(options)
+    non_interactive: true,}.merge(options)
 )
 logger.info "Connected to #{host}"
 
